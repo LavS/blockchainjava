@@ -17,6 +17,7 @@ class BlockTest extends GroovyTestCase {
     void afterTest() {
         block = null;
     }
+
     @Test
     void testBlock() {
         Assert.assertTrue(true);
@@ -25,5 +26,25 @@ class BlockTest extends GroovyTestCase {
     @Test(timeout = 500l)
     void timeStampTest() {
         while (true);
+    }
+
+    @Test
+    void testNewBlock() {
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    void testNewTransaction() {
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    void testHash() {
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    void testLast() {
+        Assert.assertTrue(true);
     }
 }
