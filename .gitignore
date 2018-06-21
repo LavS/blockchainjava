@@ -1,4 +1,4 @@
-﻿#############
+#############
 ## Idea
 #############
 target/
@@ -12,3 +12,4 @@ target/
 *.class
 *.info
 *.properties
+~$*.docx
