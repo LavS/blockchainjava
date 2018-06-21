@@ -5,21 +5,21 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-class BlockTest extends GroovyTestCase {
-    private Block block;
+class MessageTest extends GroovyTestCase {
+    private Message message;
 
     @Before
     void initTest() {
-        block = new Block();
+        message = new Message();
     }
 
     @After
     void afterTest() {
-        block = null;
+        message = null;
     }
 
     @Test
-    void testBlock() {
+    void testMessage() {
         Assert.assertTrue(true);
     }
 
