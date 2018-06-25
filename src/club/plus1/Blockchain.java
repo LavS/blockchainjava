@@ -27,7 +27,7 @@ public class Blockchain {
     public Blockchain(){
         this.chain = new LinkedList<Block>();
         this.messages = new LinkedList<Message>();
-        this.newBlock(100, "");
+        this.createBlock(100, "");
     }
 
     /**
@@ -36,7 +36,7 @@ public class Blockchain {
      * @param prevHash  хеш предыдущего блока
      * @return новый объекта класса Block(Блок)
      */
-    public Block newBlock(int proof, String prevHash){
+    public Block createBlock(int proof, String prevHash){
         Block block = new Block(this.chain.size(), this.messages, proof, prevHash);
         this.messages = new LinkedList<Message>();
         this.chain.add(block);
@@ -51,7 +51,7 @@ public class Blockchain {
      * @param comment   комментарий
      * @return номер сообщения в блоке
      */
-    public int newMessage(String from, String to, float amount, String comment){
+    public int createMessage(String from, String to, float amount, String comment){
         Message message = new Message(from, to, amount, comment);
         this.messages.add(message);
         return this.messages.size();
@@ -63,7 +63,7 @@ public class Blockchain {
      * @return строка с хешем блока
      * @throws NoSuchAlgorithmException может появиться ошибка при создании хеша
      */
-    public static String hash(Block block) throws NoSuchAlgorithmException {
+    public static String getHash(Block block) throws NoSuchAlgorithmException {
         String text = block.toString();
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] hash = digest.digest(text.getBytes(StandardCharsets.UTF_8));
@@ -74,7 +74,7 @@ public class Blockchain {
      * Получение последнего блока в блокчейне
      * @return последний блок
      */
-    public Block last(){
+    public Block getLastBlock(){
         return this.chain.getLast();
     }
 }

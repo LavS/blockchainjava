@@ -23,8 +23,8 @@ class BlockchainTest extends GroovyTestCase {
         Assert.assertTrue(true);
     }
 
-    @Test(timeout = 500l)
-    void timeStampTest() {
+    @Test(timeout = 1000L)
+    public void timeStampTest() {
         while (true);
     }
 
