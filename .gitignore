@@ -2,6 +2,7 @@
 ## Idea
 #############
 target/
+doc/
 .idea/
 .idea
 .repository/
