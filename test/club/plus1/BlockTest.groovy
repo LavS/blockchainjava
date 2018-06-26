@@ -1,16 +1,16 @@
 package club.plus1
 
+import static org.junit.Assert.*;
 import org.junit.After
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-class BlockTest extends GroovyTestCase {
+class BlockTest {
     private Block block;
 
     @Before
     void initTest() {
-        block = new Block();
+        block = new Block(0, new LinkedList<Message>(), 100, "");
     }
 
     @After
@@ -19,12 +19,14 @@ class BlockTest extends GroovyTestCase {
     }
 
     @Test
-    void testBlock() {
-        Assert.assertTrue(true);
+    void test_Block_NotNull() throws Exception {
+        assertNotNull(block);
     }
 
-    @Test(timeout = 500l)
-    void timeStampTest() {
-        while (true);
+    @Test
+    void test_toString_StringNotEmpty() throws Exception {
+        String text = block.toString();
+        assertTrue(text.size() > 0);
     }
+
 }

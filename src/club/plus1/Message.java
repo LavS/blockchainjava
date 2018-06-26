@@ -4,29 +4,30 @@ package club.plus1;
  * Класс описывает объект {@link Message <b>Message(Сообщение)</b>},
  * который входит в качестве элемента <b>LinkedList</b> в поле <b>messages</b>
  * в классах {@link Block <b>Block</b>} и {@link Blockchain <b>Blockchain</b>}.
- * Пока в классе все поля публичны, что не безопасно.
  * Ошибки в классе пока не обрабатываются и не перехватыаются.
+ *
  * @author lavsexpert
  * @version 1.0
  */
-public class Message extends Object{
+public class Message extends Object {
     /** Адрес отправителя */
-    public String from;
+    private String from;
     /** Адрес получателя */
-    public String to;
+    private String to;
     /** Количество */
-    public float amount;
+    private float amount;
     /** Текст сообщения */
-    public String text;
+    private String text;
 
     /**
      * Конструктор объекта {@link Message <b>Message(Сообщение)</b>} в блокчейне
-     * @param from      адрес отправителя
-     * @param to        адрес получателя
-     * @param amount    количество
-     * @param text      текст сообщения
+     *
+     * @param from   адрес отправителя
+     * @param to     адрес получателя
+     * @param amount количество
+     * @param text   текст сообщения
      */
-    public Message(String from, String to, float amount, String text){
+    public Message(String from, String to, float amount, String text) {
         this.from = from;
         this.to = to;
         this.amount = amount;
@@ -35,6 +36,7 @@ public class Message extends Object{
 
     /**
      * Текст объекта для вывода
+     *
      * @return Возвращает текст в формате:
      * <b><br>From: {@link Message#from}
      * <br>To: {@link Message#to}
@@ -42,7 +44,7 @@ public class Message extends Object{
      * <br>{@link Message#text}</b>
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "From: " + this.from + "\n"
                 + "To: " + this.to + "\n"
                 + "Amount: " + this.amount + "\n"
