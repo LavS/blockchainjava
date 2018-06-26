@@ -28,5 +28,4 @@ class BlockTest {
         String text = block.toString();
         assertTrue(text.size() > 0);
     }
-
 }

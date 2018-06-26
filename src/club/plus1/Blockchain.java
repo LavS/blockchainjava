@@ -135,5 +135,4 @@ public class Blockchain extends Object {
         }
         return text;
     }
-
 }

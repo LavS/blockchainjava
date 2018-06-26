@@ -1,6 +1,6 @@
 package club.plus1;
 
-        import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Основной класс программы, через который идёт взаимодействие с другими классами и консолью
